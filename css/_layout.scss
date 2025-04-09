@@ -1,0 +1,44 @@
+$max_width: 1320px;
+
+$small_screen_breakpoint: 1199px;
+$desktop_breakout: 1299px;
+$tablet_breakpoint: 991px;
+$mobile_breakpoint: 767px;
+
+$padding_desktop: 0 60px;
+$padding_mobile: 0 20px;
+
+:root {
+	scroll-behavior: smooth;
+	scroll-padding-top: 105px;
+}
+
+body {
+	overflow-x: hidden;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 0;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.nav-shortcuts{
+	a{
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		z-index: 100000;
+		padding: 10px 20px;
+		font-weight: bold;
+		color: #000;
+		background-color: #fff;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+		transform: translate3d(-50%, -200%, 0);
+	}
+}
