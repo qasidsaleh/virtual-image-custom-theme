@@ -83,6 +83,8 @@ virtual-image/
 
 4. **Custom Functions**:
    - Collection of reusable PHP functions for custom functionality
+      - Registering CPT
+      - Registering ACF Blocks
 
 ### Code Overview
 
