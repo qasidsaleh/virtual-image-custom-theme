@@ -1,7 +1,6 @@
 <?php
 
 //include_once get_stylesheet_directory() . '/custom-functions/register-cpt.php';
-include_once get_stylesheet_directory() . '/custom-functions/register-acf-blocks.php';
 require_once get_stylesheet_directory() . '/includes/components.php';
 
 /*****************************************************
