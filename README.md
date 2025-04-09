@@ -66,17 +66,22 @@ virtual-image/
 ## How It Works
 
 ### Theme Features
-1. **ACF**:
-   - It contains pre build components json file
+1. **ACF (Advanced Custom Fields)**:
+   - Pre-built components stored in a JSON file for easy reuse.
 
 2. **Assets**:
-   - It includes all assets e.g (images, pdfs, videos)
+   - Centralized storage for all media assets, including:
+      - Images
+      - PDFs
+      - Videos
 
 3. **CSS**:
-   - It includes all stylesheets side wide and bootstrap 4.
+   - Global stylesheets for the entire site, including.
+      - Custom styles
+      - Bootstrap 4 framework
 
 4. **Custom Functions**:
-   - It includes all custom functions files e.g ().
+   - Collection of reusable PHP functions for custom functionality
 
 ### Code Overview
 
