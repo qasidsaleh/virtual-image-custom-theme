@@ -1,13 +1,9 @@
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+@use 'node_modules/bootstrap/scss/bootstrap' as *;
 
-@import "utilities/normalize";
-@import "utilities/colours";
-@import "layout";
-@import "utilities/typography";
-@import "utilities/buttons";
+@use 'utilities' as *;
 
-@import "header";
-@import "footer";
+@use 'layout';
+@use 'header';
+@use 'footer';
 
-@import "../includes/components/hero/hero";
-@import "../includes/components/grid/grid"
+@use '../includes/components' as *;

@@ -3421,6 +3421,7 @@ input[type=button].btn-block {
 }
 
 .custom-select {
+  appearance: none;
   display: inline-block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -3433,7 +3434,6 @@ input[type=button].btn-block {
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  appearance: none;
 }
 .custom-select:focus {
   border-color: rgb(127.5, 189, 255);
@@ -3564,6 +3564,7 @@ input[type=button].btn-block {
   border: 0;
 }
 .custom-range::-webkit-slider-thumb {
+  appearance: none;
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
@@ -3571,7 +3572,6 @@ input[type=button].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-webkit-slider-thumb {
@@ -3591,13 +3591,13 @@ input[type=button].btn-block {
   border-radius: 1rem;
 }
 .custom-range::-moz-range-thumb {
+  appearance: none;
   width: 1rem;
   height: 1rem;
   background-color: #007bff;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
@@ -3617,6 +3617,7 @@ input[type=button].btn-block {
   border-radius: 1rem;
 }
 .custom-range::-ms-thumb {
+  appearance: none;
   width: 1rem;
   height: 1rem;
   margin-top: 0;
@@ -3626,7 +3627,6 @@ input[type=button].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
@@ -5210,8 +5210,8 @@ a.close.disabled {
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
-  transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
+  transition: transform 0.3s ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
@@ -9569,6 +9569,11 @@ table {
   border-spacing: 0;
 }
 
+.btn-primary {
+  background-color: #000;
+  border-color: #000;
+}
+
 :root {
   scroll-behavior: smooth;
   scroll-padding-top: 105px;
@@ -9604,24 +9609,25 @@ img {
   transform: translate3d(-50%, -200%, 0);
 }
 
-.btn-primary {
-  background-color: #6A0006;
-  border-color: #6A0006;
-}
-
 .hero .section-inner {
   position: relative;
 }
-.hero .section-inner h1 {
+.hero .section-inner .hero-caption {
   position: absolute;
   top: 50%;
   left: 60px;
   right: 0;
   transform: translateY(-50%);
-  color: #FFFFFF;
   z-index: 99;
+  max-width: 500px;
+}
+.hero .section-inner .hero-caption h1 {
+  color: #fff;
   margin: 0;
-  font-size: 40px;
+  font-size: 20px;
+}
+.hero .section-inner .hero-caption p {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

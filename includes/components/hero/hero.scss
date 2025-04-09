@@ -1,16 +1,22 @@
 .hero{
     .section-inner{
         position: relative;
-        h1{
+        .hero-caption{
             position: absolute;
             top: 50%;
             left: 60px;
             right: 0;
             transform: translateY(-50%);
-            color: $white;
             z-index: 99;
-            margin: 0;
-            font-size: $large_size;
+            max-width: 500px;
+            h1{
+                color: #fff;
+                margin: 0;
+                font-size: 20px;
+            }
+            p{
+                color: #fff;
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ virtual-image/
 │   ├── node_modules
 |   |   ├── /*
 |   ├── utilities
+|   |   ├── _index.scss 
 |   |   ├── _buttons.scss 
 |   |   ├── _typography.scss
 |   |   ├── colours.scss

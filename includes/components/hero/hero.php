@@ -1,6 +1,7 @@
 <?php
-    $banner_image = get_field('banner_image');
-    $heading = get_field('heading');
+    $heading = get_sub_field('hero_heading');
+    $content = get_sub_field('hero_content');
+    $banner_image = get_sub_field('hero_image');
 ?>
 
 <section id="hero" class="hero">
@@ -9,11 +10,15 @@
             <?php 
                 if($banner_image){
                     display_image($banner_image);
-                } 
-                if($heading){ 
-                    echo '<h1>'.$heading.'</h1>';
-                } 
+                }  
             ?>
+            <div class="hero-caption">
+                <?php if($heading){ 
+                    echo '<h1>'.$heading.'</h1>';
+                } if($content){ 
+                    echo '<p>'.$content.'</p>';
+                } ?>
+            </div>
         </div>
     </div>
 </section>
