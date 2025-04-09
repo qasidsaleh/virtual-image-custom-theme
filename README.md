@@ -47,6 +47,7 @@ virtual-image/
 |   |   ├── hero/
 |   |   |   ├── hero.php
 |   |   |   ├── hero.scss
+|   |   ├── components.php
 ├── js/
 |   ├── scripts.js 
 ├── page-templates
