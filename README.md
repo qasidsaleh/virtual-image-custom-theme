@@ -95,8 +95,8 @@ icnlude/components Contains all componnets folders and its PHP/SCSS files
 
 ### NPM Package for SCSS and Bootstrap4
 - under theme folder
-- npm install -g npm@latest
-- for bootstrap - under css folder
+   - `npm install -g npm@latest`
+- For bootstrap - under css folder
     - `npm install bootstrap@4`
 - For SASS Watcher
     - `npm install -g sass`
