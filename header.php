@@ -14,7 +14,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php wp_head(); ?>
-
+		
 		<?php if($header_script){echo $header_script;} ?>
 
 		<div class="nav-shortcuts" title="skip links">
