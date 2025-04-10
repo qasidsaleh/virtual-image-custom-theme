@@ -104,8 +104,9 @@ virtual-image/
     - `npm install bootstrap@4`
 - For SASS Watcher
     - `npm install -g sass`
-- To Watch SASS file
-    - `sass --watch css/style.scss:style.css`
+- To Watch SASS file under css folder
+   - `cd css` under themes
+    - `sass --watch style.scss:style.css`
 
 ## Temporary Test URL
 [Dev Test](https://test-dev.local/)
