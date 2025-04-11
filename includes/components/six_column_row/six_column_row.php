@@ -3,8 +3,8 @@
     $second_column = get_sub_field('second_column');
     $third_column = get_sub_field('third_column');
     $fourth_column = get_sub_field('fourth_column');
-    $five_column = get_sub_field('five_column');
-    $six_column = get_sub_field('six_column');
+    $five_column = get_sub_field('fifth_column');
+    $six_column = get_sub_field('sixth_column');
 ?>
 
 <section class="four-column-row">
