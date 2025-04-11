@@ -29,7 +29,7 @@ Download and install Git from [https://git-scm.com/downloads](https://git-scm.co
 
 4. In the address area, type `cmd` and press Enter.
 
-5. In the command prompt, type git clone [https://github.com/qasidsaleh/virtual-image-custom-theme](https://github.com/qasidsaleh/virtual-image-custom-theme) to clone the custom theme into the newly installed WordPress.
+5. In the command prompt, type `git clone https://github.com/qasidsaleh/virtual-image-custom-theme` to clone the custom theme into the newly installed WordPress.
 
 6. Go to the site's WP admin and activate the newly custom theme under `Appearance > Themes`.
 
@@ -42,7 +42,6 @@ Download and install Git from [https://git-scm.com/downloads](https://git-scm.co
 ## Importing Page Components and Theme Options
 
 1. Import the page components and theme options JSON file, which can be found under the custom theme's `acf` directory.
-
 
 ## Folder Structure
 ```
