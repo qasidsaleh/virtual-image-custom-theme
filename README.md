@@ -4,6 +4,46 @@
 ## The Problem to Be Solved
 I created this custom theme after noticing that the Understrap theme used with a child theme, contained a lot of unnecessary and unused code. To address this, I developed a streamlined custom theme with clean, accurate code. It's designed to be easy to refine or customize based on specific project requirements.
 
+## Getting Started with WordPress
+Before you begin, make sure you have the following installed on your machine:
+
+1. **LocalWP**:
+Local WP: Download and install Local WP from [https://localwp.com/](https://localwp.com/). Create an account and install it on your machine.
+
+2. **Node.js**:
+Install Node.js from [https://nodejs.org/en/](https://nodejs.org/en/). Check the version by typing node -v in the command prompt. If not installed, download and install it.
+
+3. **npm**:
+Install npm by typing `npm install -g npm@latest` in the command prompt.
+
+4. **Git**: 
+Download and install Git from [https://git-scm.com/downloads](https://git-scm.com/downloads).
+
+## Installing the Custom Theme
+
+1. Open Local WP and create a new site by checking all default options. This will install basic WordPress with a default theme.
+
+2. Go to the site folder under the site name and click on it. This will open the site directory.
+
+3. Open the `app > public > wp-content > themes` directory.
+
+4. In the address area, type `cmd` and press Enter.
+
+5. In the command prompt, type git clone [https://github.com/qasidsaleh/virtual-image-custom-theme](https://github.com/qasidsaleh/virtual-image-custom-theme) to clone the custom theme into the newly installed WordPress.
+
+6. Go to the site's WP admin and activate the newly custom theme under `Appearance > Themes`.
+
+## Installing the Custom Theme
+
+1. Install ACF Pro and activate its license key, which can be found in Google Docs.
+
+2. Go to `Plugins` and check if `ACF Pro` is up to date. If not, hit the Update button.
+
+## Importing Page Components and Theme Options
+
+1. Import the page components and theme options JSON file, which can be found under the custom theme's `acf` directory.
+
+
 ## Folder Structure
 ```
 virtual-image/
@@ -34,7 +74,6 @@ virtual-image/
 |   ├── style.css.map
 |   ├── style.scss
 ├── custom-functions/
-|   ├── register-acf-blocks.php
 |   ├── register-cpt.php
 ├── fonts/
 ├── includes/
@@ -42,9 +81,6 @@ virtual-image/
 |   |   ├── btn-primary.php
 |   |   ├── btn-secondary.php
 |   ├── components/
-|   |   ├── grid/
-|   |   |   ├── grid.php
-|   |   |   ├── grid.scss
 |   |   ├── hero/
 |   |   |   ├── hero.php
 |   |   |   ├── hero.scss
