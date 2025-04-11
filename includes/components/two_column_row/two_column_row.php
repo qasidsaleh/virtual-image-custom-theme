@@ -4,7 +4,7 @@
 ?>
 
 <section class="two-column-row">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6">
                 <?php echo $first_column; ?>

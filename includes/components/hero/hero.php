@@ -5,7 +5,7 @@
 ?>
 
 <section id="hero" class="hero">
-    <div class="container">
+    <div class="container-fluid">
         <div class="section-inner">
             <?php 
                 if($banner_image){

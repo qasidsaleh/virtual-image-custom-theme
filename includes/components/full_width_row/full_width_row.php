@@ -6,8 +6,8 @@
 ?>
 
 <section class="full-width-column <?php echo $generic_classes; ?>">
-    <div class="container">
-    <i class="fa fa-address-card" aria-hidden="true"></i>
+    <div class="container-fluid">
+        <i class="fa fa-address-card" aria-hidden="true"></i>
         <?php echo $full_width_column; ?>
     </div>
 </section>

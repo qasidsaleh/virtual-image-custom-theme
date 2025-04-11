@@ -142,9 +142,9 @@ add_shortcode('my_shortcode', 'my_shortcode');
             Action/Filters + Shortcodes
 *****************************************************/
 // Add Actions
-add_action('wp_enqueue_scripts', 'html5blank_styles'); 
 add_action('init', 'html5blank_header_scripts');
 add_action('wp_print_scripts', 'html5blank_conditional_scripts');
+add_action('wp_enqueue_scripts', 'html5blank_styles'); 
 add_filter( 'script_loader_tag', 'mind_defer_scripts', 10, 3 );
 add_action('init', 'register_html5_menu');
 // Add Filters

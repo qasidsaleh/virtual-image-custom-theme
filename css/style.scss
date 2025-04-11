@@ -1,6 +1,7 @@
 @use 'node_modules/bootstrap/scss/bootstrap' as *;
 
-@use 'utilities' as *;
+//@use 'utilities' as *;
+@use 'utilities/index';
 
 @use '../fonts/fonts';
 
