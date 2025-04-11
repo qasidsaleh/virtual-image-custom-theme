@@ -25,24 +25,6 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "key": "field_67f7e69a345c4",
-                                "label": "Generic Classes",
-                                "name": "",
-                                "aria-label": "",
-                                "type": "tab",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "placement": "top",
-                                "endpoint": 0,
-                                "selected": 0
-                            },
-                            {
                                 "key": "field_67f7e6c3345c5",
                                 "label": "Select Classes",
                                 "name": "select_classes",

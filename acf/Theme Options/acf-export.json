@@ -111,6 +111,48 @@
                 "append": ""
             },
             {
+                "key": "field_67f9351d46e4c",
+                "label": "Top Menu",
+                "name": "top_menu",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Menu Item",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67f9354e46e4d",
+                        "label": "Menu Item",
+                        "name": "menu_item",
+                        "aria-label": "",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "allow_in_bindings": 0,
+                        "parent_repeater": "field_67f9351d46e4c"
+                    }
+                ]
+            },
+            {
                 "key": "field_67f686178b963",
                 "label": "Additional Scripts",
                 "name": "",
