@@ -13317,6 +13317,13 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
   z-index: 99;
   max-width: 500px;
 }
+@media only screen and (max-width: 767px) {
+  .hero .section-inner .hero-caption {
+    left: 20px;
+    right: 20px;
+    margin: 0 auto;
+  }
+}
 .hero .section-inner .hero-caption h1 {
   color: #FFFFFF;
   margin: 0;
