@@ -33,7 +33,7 @@ Download and install Git from [https://git-scm.com/downloads](https://git-scm.co
 
 6. Go to the site's WP admin and activate the newly custom theme under `Appearance > Themes`.
 
-## Installing the Custom Theme
+## Installing ACF Pro
 
 1. Install ACF Pro and activate its license key, which can be found in Google Docs.
 
