@@ -12991,14 +12991,12 @@ img {
   z-index: 100000;
   padding: 10px 20px;
   font-weight: bold;
-  color: #000;
-  background-color: #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
   transform: translate3d(-50%, -200%, 0);
 }
 
 header {
-  background: #fff;
+  background: #FFFFFF;
   z-index: 998;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
   position: sticky;
@@ -13041,14 +13039,14 @@ header .topbar ul li:not(:last-child):after {
   width: 1px;
   height: 25px;
   right: -3px;
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 header .topbar ul li a {
   font-size: 14px;
-  color: #fff;
+  color: #FFFFFF;
 }
 header .topbar .custom-button {
-  background-color: #fff;
+  background-color: #FFFFFF;
   padding: 12px 20px;
   color: #2c98d4;
   display: inline-block;
@@ -13081,7 +13079,7 @@ header .navigation .inner .hamburger svg {
   width: 50px;
   height: auto;
   margin: 0;
-  fill: #000;
+  fill: #000000;
 }
 header .navigation .inner .hamburger .line {
   transition: y 0.15s ease-in 0.15s, rotate 0.15s ease-in, opacity 0ms 0.15s, fill 0.3s, x 0.3s;
@@ -13123,11 +13121,11 @@ header .navigation .inner .header-right .main-nav #main-menu > li a {
   line-height: 20px;
   display: block;
   position: relative;
-  color: #000;
+  color: #000000;
   text-decoration: none;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 1399px) {
+@media only screen and (max-width: 1299px) {
   header .navigation .inner .header-right .main-nav #main-menu {
     gap: 15px;
   }
@@ -13159,7 +13157,7 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
   transition: visibility 0s, opacity 0.3s;
   position: absolute;
   top: auto;
-  background: #fff;
+  background: #FFFFFF;
   padding: 0;
   width: 290px;
   left: calc(100% + 45px);
@@ -13199,18 +13197,18 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  color: #000;
+  color: #000000;
   text-align: left;
   text-transform: capitalize;
   padding: 15px 25px;
 }
 header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-children .sub-menu li a:hover {
   background-color: #2c98d4;
-  color: #fff;
+  color: #FFFFFF;
 }
 header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-children .sub-menu li.current_page_item a {
-  background-color: #6A0006;
-  color: #fff;
+  background-color: #2c98d4;
+  color: #FFFFFF;
 }
 header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-children.open .sub-menu {
   visibility: visible;
@@ -13223,7 +13221,7 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
 @media only screen and (max-width: 991px) {
   header .navigation .inner .header-right {
     display: block;
-    background-color: #fff;
+    background-color: #FFFFFF;
     position: absolute;
     top: 169px;
     bottom: 0;
@@ -13263,12 +13261,12 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
   header .navigation .inner .header-right .main-nav #main-menu li a {
     font-size: 18px;
     line-height: 54px;
-    color: #fff;
+    color: #FFFFFF;
     padding: 0 20px;
-    border-bottom: solid 1px #fff;
+    border-bottom: solid 1px #FFFFFF;
   }
   header .navigation .inner .header-right .main-nav #main-menu li a:hover {
-    color: #fff;
+    color: #FFFFFF;
   }
   header .navigation .inner .header-right .main-nav #main-menu li.menu-item-has-children a:after {
     display: none;
@@ -13297,6 +13295,19 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
 .hero .section-inner {
   position: relative;
 }
+@media only screen and (max-width: 767px) {
+  .hero .section-inner .desktop-image {
+    display: none;
+  }
+}
+.hero .section-inner .mobile-image {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .hero .section-inner .mobile-image {
+    display: block;
+  }
+}
 .hero .section-inner .hero-caption {
   position: absolute;
   top: 50%;
@@ -13307,12 +13318,12 @@ header .navigation .inner .header-right .main-nav #main-menu .menu-item-has-chil
   max-width: 500px;
 }
 .hero .section-inner .hero-caption h1 {
-  color: #fff;
+  color: #FFFFFF;
   margin: 0;
   font-size: 30px;
 }
 .hero .section-inner .hero-caption p {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */

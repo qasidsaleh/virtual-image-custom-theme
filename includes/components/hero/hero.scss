@@ -1,6 +1,18 @@
+@import '../../../css/utilities/variables';
 .hero{
     .section-inner{
         position: relative;
+        .desktop-image{
+            @media only screen and (max-width:$mobile_breakpoint){
+                display: none;
+            }
+        }
+        .mobile-image{
+            display: none;
+            @media only screen and (max-width:$mobile_breakpoint){
+                display: block;
+            }
+        }
         .hero-caption{
             position: absolute;
             top: 50%;
@@ -10,12 +22,12 @@
             z-index: 99;
             max-width: 500px;
             h1{
-                color: #fff;
+                color: $white;
                 margin: 0;
                 font-size: 30px;
             }
             p{
-                color: #fff;
+                color: $white;
             }
         }
     }
