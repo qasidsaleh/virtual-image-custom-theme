@@ -1,0 +1,42 @@
+@import '../../../css/utilities/variables';
+
+.grid{
+    display: grid;
+    gap: 50px;
+    &.col-1{
+        grid-template-columns: 1fr;
+    }
+    &.col-2{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    &.col-3{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+    &.col-4{
+        grid-template-columns: repeat(4 , 1fr);
+    }
+    &.col-5{
+        grid-template-columns: repeat(5 , 1fr);
+    }
+    &.col-6{
+        grid-template-columns: repeat(6 , 1fr);
+    }
+    @media only screen and (max-width: $laptop_breakpoint) {
+        &.col-6{
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 40px;
+        }
+    }
+    @media only screen and (max-width: $tablet_breakpoint) {
+        &.col-5,&.col-6{
+            grid-template-columns: repeat(2 , 1fr);
+            gap: 30px;
+        }
+    }
+    @media only screen and (max-width: $mobile_breakpoint) {
+        &.col-2,&.col-3,&.col-4,&.col-5,&.col-6{
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+}

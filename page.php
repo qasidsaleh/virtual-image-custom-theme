@@ -8,6 +8,13 @@
 				endwhile;
 			endif;
 		?>
+		<div class="container-fluid">
+			<div class="content-area mt-50">
+				<?php
+					the_content();
+				?>
+			</div>
+		</div>
 	</main>
 
 <?php get_footer(); ?>

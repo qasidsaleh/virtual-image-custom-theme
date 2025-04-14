@@ -138,8 +138,14 @@ function my_shortcode() {
 }
 add_shortcode('my_shortcode', 'my_shortcode');
 
+
 /*****************************************************
-            Action/Filters + Shortcodes
+            Custom WooCommerce Snippets
+*****************************************************/
+
+
+/*****************************************************
+            Action/Filters Hooks
 *****************************************************/
 // Add Actions
 add_action('init', 'html5blank_header_scripts');
@@ -162,4 +168,16 @@ remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+// WooCommerce Support
+add_theme_support( 'woocommerce' );
+
+add_action( 'wp_enqueue_scripts', 'woocommerce_enqueue_styles' );
+
+function woocommerce_enqueue_styles() {
+    wp_enqueue_style( 'woocommerce-general', WC()->plugin_url() . '/assets/css/woocommerce.css' );
+    wp_enqueue_style( 'woocommerce-layout', WC()->plugin_url() . '/assets/css/woocommerce-layout.css' );
+    wp_enqueue_style( 'woocommerce-smallscreen', WC()->plugin_url() . '/assets/css/woocommerce-smallscreen.css' );
+}
+
+
 

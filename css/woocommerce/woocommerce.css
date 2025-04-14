@@ -1,0 +1,121 @@
+/* WooCommerce Core CSS */
+
+/* Layout */
+.woocommerce {
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; */
+}
+
+.woocommerce ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.woocommerce li {
+    margin-bottom: 10px;
+}
+
+/* Product Grid */
+.woocommerce ul.products {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.woocommerce ul.products li.product {
+    margin: 10px;
+    width: calc(25% - 20px);
+}
+
+.woocommerce ul.products li.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Product Details */
+.woocommerce div.product {
+    margin-bottom: 20px;
+}
+
+.woocommerce div.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.woocommerce div.product .summary {
+    margin-top: 20px;
+}
+
+/* Cart and Checkout */
+.woocommerce-cart {
+    margin-bottom: 20px;
+}
+
+.woocommerce-cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.woocommerce-cart th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.woocommerce-cart td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.woocommerce-checkout {
+    margin-bottom: 20px;
+}
+
+/* My Account */
+.woocommerce-MyAccount-navigation{
+    border: 1px solid hsla(0,0%,7%,.11);
+    border-radius: 5px;
+}
+.woocommerce-MyAccount-navigation ul li{
+    margin-bottom: 0px;
+}
+.woocommerce-MyAccount-navigation ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    min-height: 1em;
+    padding: 15px;
+    display: block;
+}
+.woocommerce-MyAccount-navigation ul li a:hover,
+.woocommerce-MyAccount-navigation ul li.is-active a{
+    background-color: #2c98d4;
+    color: #fff;
+}
+.woocommerce-input-wrapper{
+    width: 100%;
+}
+
+/* Login */
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .woocommerce ul.products li.product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .woocommerce ul.products li.product {
+        width: 100%;
+    }
+}

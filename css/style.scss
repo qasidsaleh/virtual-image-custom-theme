@@ -1,4 +1,7 @@
-@use 'node_modules/bootstrap/scss/bootstrap' as *;
+// Uncomment if you want to use booststrap but you need to double check it will chnage some style automatically with same classes
+// @use 'node_modules/bootstrap/scss/bootstrap' as *;
+
+@use 'woocommerce/woocommerce.css';
 
 //@use 'utilities' as *;
 @use 'utilities/index';
