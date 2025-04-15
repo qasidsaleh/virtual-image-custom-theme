@@ -43,6 +43,22 @@ Download and install Git from [https://git-scm.com/downloads](https://git-scm.co
 
 1. Import the page components and theme options JSON file, which can be found under the custom theme's `acf` directory.
 
+## E-commerce Functionality with WooCommerce
+If you're planning to use this theme for an e-commerce site, you'll need to install WooCommerce. Once installed, you can customize the WooCommerce functionality by adding files to the `woocommerce` folder.
+
+## Customizing WooCommerce
+To customize WooCommerce, you can add files to the `woocommerce` folder. This folder contains template files that override the default WooCommerce templates. You can modify these files to change the layout and design of your e-commerce site.
+
+## Using Filter/Hooks Functionality
+Alternatively, you can use WooCommerce's filter and hook functionality to customize the plugin's behavior. This allows you to modify the plugin's functionality without modifying the core files.
+
+## WooCommerce CSS
+The `css` folder contains a `woocommerce.css` file, which provides default styles for WooCommerce pages. This file is imported in the `style.scss` file, which means that you can override the default styles by adding your own CSS rules to the `style.scss` file.
+
+## Customizing WooCommerce Layout
+To customize the WooCommerce layout, you can modify the `woocommerce.css` file or add your own CSS rules to the `style.scss` file. The `woocommerce.css` file provides a basic layout for WooCommerce pages, and you can override these styles to create a custom layout for your e-commerce site.
+
+
 ## Folder Structure
 ```
 virtual-image/
@@ -61,9 +77,12 @@ virtual-image/
 |   ├── utilities
 |   |   ├── _index.scss 
 |   |   ├── _buttons.scss 
+|   |   ├── _generic_classes.scss
 |   |   ├── _typography.scss
-|   |   ├── colours.scss
-|   |   ├── normalize.scss
+|   |   ├── _normalize.scss
+|   |   ├── _variables.scss
+|   ├── woocommerce
+|   |   ├── woocommerce.css
 |   ├── _footer.scss
 |   ├── _header.scss
 |   ├── _layout.scss
@@ -83,10 +102,17 @@ virtual-image/
 |   |   ├── hero/
 |   |   |   ├── hero.php
 |   |   |   ├── hero.scss
-|   |   ├── components.php
+|   |   ├── grid/
+|   |   |   ├── grid.php
+|   |   |   ├── grid.scss
+|   |   ├── _index.scss
+|   |   ├── generic_classes.php
+|   ├── components.php
 ├── js/
 |   ├── scripts.js 
 ├── page-templates
+├── woocommerce
+|   ├── /*
 ├── 404.php
 ├── footer.php
 ├── functions.php

@@ -843,7 +843,9 @@ p {
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button,
-.wp-element-button {
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
+.wp-element-button,
+.button {
   padding: 10px 25px;
   background-color: #2c98d4;
   border: solid 1px #2c98d4;
@@ -857,7 +859,9 @@ p {
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button:hover,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button:hover,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button:hover,
-.wp-element-button:hover {
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover,
+.wp-element-button:hover,
+.button:hover {
   color: #2c98d4;
   background-color: #FFFFFF;
   text-decoration: none;
@@ -3970,22 +3974,29 @@ img {
   padding: 10px 0;
   transition: all 0.3s;
 }
-.header .topbar ul {
+.header .topbar .grid {
+  display: grid;
+}
+.header .topbar .grid.col-2 {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.header .topbar .grid.col-2 ul {
   padding: 0;
   margin: 0;
 }
-.header .topbar ul li {
+.header .topbar .grid.col-2 ul li {
   position: relative;
   display: inline-block;
   padding: 0 10px;
 }
-.header .topbar ul li:first-child {
+.header .topbar .grid.col-2 ul li:first-child {
   padding-left: 0px;
 }
-.header .topbar ul li:last-child {
+.header .topbar .grid.col-2 ul li:last-child {
   padding-right: 0px;
 }
-.header .topbar ul li:not(:last-child):after {
+.header .topbar .grid.col-2 ul li:not(:last-child):after {
   position: absolute;
   content: "";
   top: 50%;
@@ -3995,11 +4006,14 @@ img {
   right: -3px;
   background-color: #FFFFFF;
 }
-.header .topbar ul li a {
+.header .topbar .grid.col-2 ul li a {
   font-size: 14px;
   color: #FFFFFF;
 }
-.header .topbar .custom-button {
+.header .topbar .grid.col-2 .custom-button {
+  justify-self: end;
+}
+.header .topbar .grid.col-2 .custom-button a {
   background-color: #FFFFFF;
   padding: 12px 20px;
   color: #2c98d4;
@@ -4246,12 +4260,6 @@ img {
   }
 }
 
-.two-column-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
-
 .hero .section-inner {
   position: relative;
 }
@@ -4330,7 +4338,7 @@ img {
 @media only screen and (max-width: 767px) {
   .grid.col-2, .grid.col-3, .grid.col-4, .grid.col-5, .grid.col-6 {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 0;
   }
 }
 

@@ -2,6 +2,7 @@
 	$header_script = get_field('header_script', 'option');
 	$top_body_script = get_field('top_body_script', 'option');
 	$logo = get_field('logo','options');
+	$enable_topbar = get_field('enable_topbar','options');
 ?>
 
 <!doctype html>
@@ -35,10 +36,10 @@
 	<?php if($top_body_script){echo $top_body_script;} ?>
         <header id="header" class="header">
 			<!-- Topbar -->
-			<div id="topbar" class="topbar">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+			<?php if($enable_topbar){ ?>
+				<div id="topbar" class="topbar">
+					<div class="container-fluid">
+						<div class="grid col-2">
 							<?php if( have_rows('top_menu','options') ): ?>
 								<ul class="top-menu">
 									<?php while( have_rows('top_menu','options') ) : the_row();
@@ -47,15 +48,15 @@
 											<a href="<?php echo $menu_item['url']; ?>" <?php if($menu_item['target']){echo 'target="_blank"';} ?>><?php echo $menu_item['title']; ?></a>
 										</li>
 									<?php endwhile; ?>
-							</ul>
+								</ul>
 							<?php endif; ?>
-						</div>
-						<div class="col-md-6 text-center text-md-right">
-							<a href="#" class="custom-button">Custom Button</a>
+							<div class="custom-button">
+								<a href="#">Custom Button</a>
+							</div>	
 						</div>
 					</div>
 				</div>
-			</div>
+			<?php } ?>
 			<!-- Navigation Area -->
 			<div class="navigation">
 				<div class="container-fluid">
