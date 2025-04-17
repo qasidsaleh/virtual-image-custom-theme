@@ -43,10 +43,12 @@
 										</li>
 									<?php endwhile; ?>
 								</ul>
-							<?php endif; ?>
-							<div class="custom-button">
-								<a href="<?php echo $top_btn['url']; ?>" <?php if($top_btn['target']){echo 'target="_blank"';} ?>><?php echo $top_btn['title']; ?></a>
-							</div>	
+							<?php endif;
+							if($top_btn){ ?>
+								<div class="custom-button">
+									<a href="<?php echo $top_btn['url']; ?>" <?php if($top_btn['target']){echo 'target="_blank"';} ?>><?php echo $top_btn['title']; ?></a>
+								</div>
+							<?php } ?>	
 						</div>
 					</div>
 				</div>
