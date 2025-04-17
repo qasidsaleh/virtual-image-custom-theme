@@ -924,8 +924,8 @@
                                 "multiple": 1,
                                 "allow_null": 0,
                                 "allow_in_bindings": 0,
-                                "ui": 0,
-                                "ajax": 0,
+                                "ui": 1,
+                                "ajax": 1,
                                 "placeholder": ""
                             },
                             {
