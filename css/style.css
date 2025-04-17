@@ -4266,4 +4266,13 @@ img {
   }
 }
 
+.slider .pre {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 70px;
+}
+.slider .swiper-slider .swiper-slide {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

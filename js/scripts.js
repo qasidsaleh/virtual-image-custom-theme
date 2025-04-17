@@ -4,6 +4,7 @@
 		// initializer
 		const init = () => {
 			startHeader();
+			startSwiper();
 		}
 		init();
 	});
@@ -83,4 +84,27 @@
 			subItems[subItems.length - 1].style.marginRight = subRight + 'px';
 		});
     }	
+
+	// Swiper Slider
+	function startSwiper () {
+		var swiper = new Swiper(".swiper-slider", {
+			spaceBetween: 30,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				767: {
+				  slidesPerView: 2,
+				},
+				991: {
+				  slidesPerView: 3,
+				}
+			}
+		});
+	}
+
 })(jQuery, this);
