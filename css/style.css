@@ -4323,6 +4323,36 @@ img {
 .grid.col-6 {
   grid-template-columns: repeat(6, 1fr);
 }
+.grid.col-1-11 {
+  grid-template-columns: 1fr 11fr;
+}
+.grid.col-2-10 {
+  grid-template-columns: 2fr 10fr;
+}
+.grid.col-3-9 {
+  grid-template-columns: 3fr 9fr;
+}
+.grid.col-4-8 {
+  grid-template-columns: 4fr 8fr;
+}
+.grid.col-5-7 {
+  grid-template-columns: 5fr 7fr;
+}
+.grid.col-7-5 {
+  grid-template-columns: 7fr 5fr;
+}
+.grid.col-8-4 {
+  grid-template-columns: 8fr 4fr;
+}
+.grid.col-9-3 {
+  grid-template-columns: 9fr 3fr;
+}
+.grid.col-10-2 {
+  grid-template-columns: 10fr 2fr;
+}
+.grid.col-11-1 {
+  grid-template-columns: 11fr 1fr;
+}
 @media only screen and (max-width: 1199px) {
   .grid.col-6 {
     grid-template-columns: repeat(3, 1fr);
@@ -4330,13 +4360,13 @@ img {
   }
 }
 @media only screen and (max-width: 991px) {
-  .grid.col-5, .grid.col-6 {
+  .grid.col-5, .grid.col-6, .grid.col-1-11, .grid.col-2-10, .grid.col-3-9, .grid.col-4-8, .grid.col-5-7, .grid.col-7-5, .grid.col-8-4, .grid.col-9-3, .grid.col-10-2, .grid.col-11-1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .grid.col-2, .grid.col-3, .grid.col-4, .grid.col-5, .grid.col-6 {
+  .grid.col-2, .grid.col-3, .grid.col-4, .grid.col-5, .grid.col-6, .grid.col-1-11, .grid.col-2-10, .grid.col-3-9, .grid.col-4-8, .grid.col-5-7, .grid.col-7-5, .grid.col-8-4, .grid.col-9-3, .grid.col-10-2, .grid.col-11-1 {
     grid-template-columns: 1fr;
     gap: 0;
   }
