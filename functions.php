@@ -169,9 +169,9 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 // WooCommerce Support
-add_theme_support( 'woocommerce' );
+//add_theme_support( 'woocommerce' );
 
-add_action( 'wp_enqueue_scripts', 'woocommerce_enqueue_styles' );
+//add_action( 'wp_enqueue_scripts', 'woocommerce_enqueue_styles' );
 
 function woocommerce_enqueue_styles() {
     wp_enqueue_style( 'woocommerce-general', WC()->plugin_url() . '/assets/css/woocommerce.css' );
