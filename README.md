@@ -46,6 +46,13 @@ Download and install Git from [https://git-scm.com/downloads](https://git-scm.co
 ## E-commerce Functionality with WooCommerce
 If you're planning to use this theme for an e-commerce site, you'll need to install WooCommerce. Once installed, you can customize the WooCommerce functionality by adding files to the `woocommerce` folder.
 
+1. Need to uncomment hooks from the end of functions file
+`add_theme_support( 'woocommerce' );`
+`add_action( 'wp_enqueue_scripts', 'woocommerce_enqueue_styles' );`
+
+2. Also uncomment style under style.scss
+`@use 'woocommerce/woocommerce.css';`
+
 ## Customizing WooCommerce
 To customize WooCommerce, you can add files to the `woocommerce` folder. This folder contains template files that override the default WooCommerce templates. You can modify these files to change the layout and design of your e-commerce site.
 
