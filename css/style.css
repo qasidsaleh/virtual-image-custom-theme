@@ -3808,7 +3808,7 @@ body {
 }
 
 .container-fluid {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -4145,19 +4145,28 @@ img {
   }
 }
 
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1920px) {
+  .hero {
+    max-width: 1920px;
+  }
+}
 .hero .section-inner {
   position: relative;
 }
 @media only screen and (max-width: 767px) {
-  .hero .section-inner .desktop-image {
+  .hero .section-inner .hide-mobile {
     display: none;
   }
 }
-.hero .section-inner .mobile-image {
+.hero .section-inner .hide-desktop {
   display: none;
 }
 @media only screen and (max-width: 767px) {
-  .hero .section-inner .mobile-image {
+  .hero .section-inner .hide-desktop {
     display: block;
   }
 }

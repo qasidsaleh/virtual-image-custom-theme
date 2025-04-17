@@ -1,3 +1,5 @@
+@import 'utilities/variables';
+
 :root {
 	scroll-behavior: smooth;
 	scroll-padding-top: 105px;
@@ -13,7 +15,7 @@ body {
 	z-index: 0;
 }
 .container-fluid{
-	max-width: 1440px;
+	max-width: $max_width;
 	margin: 0 auto;
 	padding: 0 20px;
 }

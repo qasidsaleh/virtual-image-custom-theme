@@ -1,13 +1,18 @@
 @import '../../../css/utilities/variables';
 .hero{
+    max-width: $max_width;
+    margin: 0 auto;
+    @media only screen and (max-width: $large_screen_breakpoint){
+        max-width: $full_width;
+    }
     .section-inner{
         position: relative;
-        .desktop-image{
+        .hide-mobile{
             @media only screen and (max-width:$mobile_breakpoint){
                 display: none;
             }
         }
-        .mobile-image{
+        .hide-desktop{
             display: none;
             @media only screen and (max-width:$mobile_breakpoint){
                 display: block;
