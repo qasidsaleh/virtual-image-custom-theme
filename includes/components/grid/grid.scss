@@ -1,72 +1,74 @@
 @import '../../../css/utilities/variables';
 
-.grid{
-    display: grid;
-    gap: 50px;
-    &.col-1{
-        grid-template-columns: 1fr;
-    }
-    &.col-2{
-        grid-template-columns: repeat(2 , 1fr);
-    }
-    &.col-3{
-        grid-template-columns: repeat(3 , 1fr);
-    }
-    &.col-4{
-        grid-template-columns: repeat(4 , 1fr);
-    }
-    &.col-5{
-        grid-template-columns: repeat(5 , 1fr);
-    }
-    &.col-6{
-        grid-template-columns: repeat(6 , 1fr);
-    }
-    &.col-1-11{
-        grid-template-columns: 1fr 11fr;
-    }
-    &.col-2-10{
-        grid-template-columns: 2fr 10fr;
-    }
-    &.col-3-9{
-        grid-template-columns: 3fr 9fr;
-    }
-    &.col-4-8{
-        grid-template-columns: 4fr 8fr;
-    }
-    &.col-5-7{
-        grid-template-columns: 5fr 7fr;
-    }
-    &.col-7-5{
-        grid-template-columns: 7fr 5fr;
-    }
-    &.col-8-4{
-        grid-template-columns: 8fr 4fr;
-    }
-    &.col-9-3{
-        grid-template-columns: 9fr 3fr;
-    }
-    &.col-10-2{
-        grid-template-columns: 10fr 2fr;
-    }
-    &.col-11-1{
-        grid-template-columns: 11fr 1fr;
-    }
-    @media only screen and (max-width: $laptop_breakpoint) {
-        &.col-6{
-            grid-template-columns: repeat(3 , 1fr);
-            gap: 40px;
-        }
-    }
-    @media only screen and (max-width: $tablet_breakpoint) {
-        &.col-5,&.col-6,&.col-1-11,&.col-2-10,&.col-3-9,&.col-4-8,&.col-5-7,&.col-7-5,&.col-8-4,&.col-9-3,&.col-10-2,&.col-11-1{
-            grid-template-columns: repeat(2 , 1fr);
-            gap: 30px;
-        }
-    }
-    @media only screen and (max-width: $mobile_breakpoint) {
-        &.col-2,&.col-3,&.col-4,&.col-5,&.col-6,&.col-1-11,&.col-2-10,&.col-3-9,&.col-4-8,&.col-5-7,&.col-7-5,&.col-8-4,&.col-9-3,&.col-10-2,&.col-11-1{
+.grid-block{
+    .grid{
+        display: grid;
+        gap: 50px;
+        &.col-1{
             grid-template-columns: 1fr;
-            gap: 0;
+        }
+        &.col-2{
+            grid-template-columns: repeat(2 , 1fr);
+        }
+        &.col-3{
+            grid-template-columns: repeat(3 , 1fr);
+        }
+        &.col-4{
+            grid-template-columns: repeat(4 , 1fr);
+        }
+        &.col-5{
+            grid-template-columns: repeat(5 , 1fr);
+        }
+        &.col-6{
+            grid-template-columns: repeat(6 , 1fr);
+        }
+        &.col-1-11{
+            grid-template-columns: 1fr 11fr;
+        }
+        &.col-2-10{
+            grid-template-columns: 2fr 10fr;
+        }
+        &.col-3-9{
+            grid-template-columns: 3fr 9fr;
+        }
+        &.col-4-8{
+            grid-template-columns: 4fr 8fr;
+        }
+        &.col-5-7{
+            grid-template-columns: 5fr 7fr;
+        }
+        &.col-7-5{
+            grid-template-columns: 7fr 5fr;
+        }
+        &.col-8-4{
+            grid-template-columns: 8fr 4fr;
+        }
+        &.col-9-3{
+            grid-template-columns: 9fr 3fr;
+        }
+        &.col-10-2{
+            grid-template-columns: 10fr 2fr;
+        }
+        &.col-11-1{
+            grid-template-columns: 11fr 1fr;
+        }
+        @media only screen and (max-width: $laptop_breakpoint) {
+            &.col-6{
+                grid-template-columns: repeat(3 , 1fr);
+                gap: 40px;
+            }
+        }
+        @media only screen and (max-width: $tablet_breakpoint) {
+            &.col-5,&.col-6,&.col-1-11,&.col-2-10,&.col-3-9,&.col-4-8,&.col-5-7,&.col-7-5,&.col-8-4,&.col-9-3,&.col-10-2,&.col-11-1{
+                grid-template-columns: repeat(2 , 1fr);
+                gap: 30px;
+            }
+        }
+        @media only screen and (max-width: $mobile_breakpoint) {
+            &.col-2,&.col-3,&.col-4,&.col-5,&.col-6,&.col-1-11,&.col-2-10,&.col-3-9,&.col-4-8,&.col-5-7,&.col-7-5,&.col-8-4,&.col-9-3,&.col-10-2,&.col-11-1{
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
         }
     }
 }
