@@ -4230,7 +4230,7 @@ img {
     font-size: 18px;
     line-height: 54px;
     color: #FFFFFF;
-    padding: 0 20px;
+    padding: 5px 20px;
     border-bottom: solid 1px #FFFFFF;
   }
   .header .navigation .inner .header-right .main-nav #main-menu li a:hover {
@@ -4252,11 +4252,6 @@ img {
     top: 0;
     transform: none;
     z-index: 99;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .header .navigation .inner .header-right {
-    top: 200px;
   }
 }
 

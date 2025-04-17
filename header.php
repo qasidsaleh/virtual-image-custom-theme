@@ -24,13 +24,6 @@
 			<a href="#footer">skip to footer</a>
 		</div>
 
-		<?php if ( is_admin_bar_showing() ) { ?>
-			<style>
-				body{
-					min-height: calc(100vh - 32px);
-				}
-			</style>
-		<?php } ?>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php if($top_body_script){echo $top_body_script;} ?>
