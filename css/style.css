@@ -4010,17 +4010,26 @@ img {
   font-size: 14px;
   color: #FFFFFF;
 }
+.header .topbar .grid.col-2 ul li a:hover {
+  text-decoration: underline;
+}
 .header .topbar .grid.col-2 .custom-button {
   justify-self: end;
 }
 .header .topbar .grid.col-2 .custom-button a {
   background-color: #FFFFFF;
+  border: solid 1px #FFFFFF;
   padding: 12px 20px;
   color: #2c98d4;
   display: inline-block;
 }
+.header .topbar .grid.col-2 .custom-button:hover a {
+  background-color: transparent;
+  color: #FFFFFF;
+}
 .header .navigation .inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 350px auto;
   align-items: center;
   justify-content: space-between;
   max-width: 1440px;
@@ -4092,6 +4101,9 @@ img {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+}
+.header .navigation .inner .header-right .main-nav #main-menu > li a:hover {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 1299px) {
   .header .navigation .inner .header-right .main-nav #main-menu {
@@ -4191,7 +4203,7 @@ img {
     display: block;
     background-color: #FFFFFF;
     position: absolute;
-    top: 169px;
+    top: 165px;
     bottom: 0;
     left: 0;
     right: 0;

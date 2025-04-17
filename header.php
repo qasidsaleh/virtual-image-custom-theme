@@ -29,7 +29,8 @@
 	<?php if($top_body_script){echo $top_body_script;} ?>
         <header id="header" class="header">
 			<!-- Topbar -->
-			<?php if($enable_topbar){ ?>
+			<?php if($enable_topbar){
+				$top_btn = get_field('top_custom_button','options'); ?>
 				<div id="topbar" class="topbar">
 					<div class="container-fluid">
 						<div class="grid col-2">
@@ -44,7 +45,7 @@
 								</ul>
 							<?php endif; ?>
 							<div class="custom-button">
-								<a href="#">Custom Button</a>
+								<a href="<?php echo $top_btn['url']; ?>" <?php if($top_btn['target']){echo 'target="_blank"';} ?>><?php echo $top_btn['title']; ?></a>
 							</div>	
 						</div>
 					</div>
@@ -56,7 +57,7 @@
 					<div class="inner">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="<?php echo home_url(); ?>" aria-label="link to homepaga">
+							<a href="<?php echo home_url(); ?>" aria-label="link to homepaga" title="Logo">
 								<?php display_image($logo); ?>
 							</a>
 						</div>
