@@ -4266,13 +4266,37 @@ img {
   }
 }
 
-.slider .pre {
+.slider-block .pre {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto 70px;
 }
-.slider .swiper-slider .swiper-slide {
+.slider-block .swiper-slider {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+.slider-block .swiper-slider .swiper-wrapper .swiper-slide {
   text-align: center;
+}
+.slider-block .swiper-slider .swiper-wrapper .swiper-slide img {
+  margin: 0 auto 20px;
+}
+.slider-block .swiper-slider .swiper-wrapper .swiper-slide strong {
+  display: block;
+  margin-bottom: 20px;
+}
+.slider-block .swiper-slider .swiper-wrapper .swiper-slide a {
+  display: block;
+}
+.slider-block .swiper-slider .slider-arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
 }
 
 /*# sourceMappingURL=style.css.map */

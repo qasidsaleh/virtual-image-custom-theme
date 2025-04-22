@@ -93,6 +93,7 @@
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
+			// width: 1000,
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
