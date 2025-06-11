@@ -4,8 +4,12 @@
 		// initializer
 		const init = () => {
 			startHeader();
+<<<<<<< HEAD
 			startAccordion();
 			//startSwiper();
+=======
+			startSwiper();
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
 		}
 		init();
 	});
@@ -80,6 +84,7 @@
 			subItems[subItems.length - 1].style.marginRight = subRight + 'px';
 		});
     }	
+<<<<<<< HEAD
 	
 	// Accordion
 	function startAccordion(){
@@ -88,11 +93,17 @@
     		$(this).parent().toggleClass('expand');
     	});
     }
+=======
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
 
 	// Swiper Slider
 	function startSwiper () {
 		var swiper = new Swiper(".swiper-slider", {
+<<<<<<< HEAD
 			spaceBetween: 100,
+=======
+			spaceBetween: 30,
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -105,12 +116,17 @@
 				767: {
 				  slidesPerView: 2,
 				},
+<<<<<<< HEAD
 				1025: {
+=======
+				991: {
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
 				  slidesPerView: 3,
 				}
 			}
 		});
 	}
+<<<<<<< HEAD
 	
 	window.addEventListener('scroll', scrollFunc, { passive: true });
 	function scrollFunc() {
@@ -131,5 +147,7 @@
 		$('.hero-image').addClass('active');
   		$('.reveal-left').addClass('active');
 	});
+=======
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
 
 })(jQuery, this);

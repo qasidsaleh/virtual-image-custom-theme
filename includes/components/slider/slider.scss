@@ -1,0 +1,40 @@
+.slider-block{
+    .pre{
+        text-align:center;
+        max-width: 1000px;
+        margin: 0 auto 70px;
+    }
+    .swiper-slider{
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+        .swiper-wrapper{
+            .swiper-slide{
+                text-align: center;
+                img{
+                    margin: 0 auto 20px;
+                }
+                strong{
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                a{
+                    display: block;
+                }
+            }
+        }
+        .slider-arrows{
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            .swiper-button-prev,
+            .swiper-button-next{
+                
+            }
+        }
+    }
+}

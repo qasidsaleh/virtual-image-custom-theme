@@ -1,4 +1,5 @@
 .hero{
+<<<<<<< HEAD
     position: relative;
     &:before{
         position: absolute;
@@ -32,6 +33,24 @@
             }
             iframe{
                 width: 100%;
+=======
+    max-width: $max_width;
+    margin: 0 auto;
+    @media only screen and (max-width: $large_screen_breakpoint){
+        max-width: $full_width;
+    }
+    .section-inner{
+        position: relative;
+        .hide-mobile{
+            @media only screen and (max-width:$mobile_breakpoint){
+                display: none;
+            }
+        }
+        .hide-desktop{
+            display: none;
+            @media only screen and (max-width:$mobile_breakpoint){
+                display: block;
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
             }
         }
         .hero-caption{

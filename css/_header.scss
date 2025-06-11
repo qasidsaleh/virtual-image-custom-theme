@@ -115,7 +115,11 @@
                                 }
                             }
                         }
+<<<<<<< HEAD
                         @media only screen and (max-width:1440px){
+=======
+                        @media only screen and (max-width:$desktop_breakpoint){
+>>>>>>> e97dcdd3578e934c957d69af53c709ab1d414c61
                             gap:15px;
                             > li{
                                 a{
