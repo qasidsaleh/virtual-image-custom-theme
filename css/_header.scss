@@ -1,14 +1,14 @@
 @import 'utilities/variables';
 
 .header{
-    background: $white;
+    background: $bg;
     z-index: 998;
-    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     transition: all .3s;
     width: 100%;
     &.sticky{
+        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
         top: -78px;
         .header-inner{
             .header-right{
@@ -16,79 +16,22 @@
             }
         }
     }
-    .topbar{
-		background-color: $primary;
-		width: 100%;
-		padding: 10px 0;
-        transition: all 0.3s;
-        .grid{
-            display: grid;
-            &.col-2{
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-                ul{
-                    padding: 0;
-                    margin: 0;
-                    li{
-                        position: relative;
-                        display: inline-block;
-                        padding: 0 10px;
-                        &:first-child{
-                            padding-left: 0px;
-                        }
-                        &:last-child{
-                            padding-right: 0px;
-                        }
-                        &:not(:last-child):after{
-                            position: absolute;
-                            content: '';
-                            top: 50%;
-                            transform: translateY(-50%);
-                            width: 1px;
-                            height: 25px;
-                            right: -3px;
-                            background-color: $white;
-                        }
-                        a{
-                            font-size: 14px;
-                            color: $white;
-                            &:hover{
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                }
-                .custom-button{
-                    justify-self: end;
-                    a{
-                        background-color: $white;
-                        border: solid 1px $white;
-                        padding: 12px 20px;
-                        color: $primary;
-                        display: inline-block;
-                    }
-                    &:hover{
-                        a{
-                            background-color: transparent;
-                            color:$white;
-                        }
-                    }
-                }
-            }
-        }
-	}
     .navigation{
         .inner{
+            position: relative;
             display: grid;
-            grid-template-columns: 350px auto;
-            align-items: center;
+            grid-template-columns: 230px 1fr;
             justify-content: space-between;
+            align-items: center;
             max-width: 1440px;
             margin: auto;
-            padding: 25px 0;
+            padding: 6px 0;
+            @media only screen and (max-width: $laptop_breakpoint){
+                display: flex;
+            }
             .logo{
                 margin-right: 20px;
-                max-width: 300px;
+                max-width: 210px;
             }
             .hamburger{
                 border: transparent;
@@ -96,7 +39,7 @@
                 align-items: center;
                 padding: 0;
                 background: transparent;
-                @media only screen and (max-width: $tablet_breakpoint){
+                @media only screen and (max-width: $laptop_breakpoint){
                     display: flex;
                 }
                 svg{
@@ -129,38 +72,54 @@
                     }
                 }
             }
+            .custom-button{
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                @media only screen and (max-width: $laptop_breakpoint){
+                    position: fixed;
+                    top: auto;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
             .header-right{
+                margin-top: 20px;
                 .main-nav{
                     #main-menu{
                         display: flex;
                         list-style: none;
-                        justify-content: space-between;
                         padding: 0;
                         margin: 0;
-                        gap:35px;
+                        gap:20px;
                         align-items: end;
+                        justify-content: end;
                         > li{
                             position: relative;
                             padding: 0 5px;
                             a{
-                                font-size: 16px;
-                                font-weight: 600;
+                                font-size: 18px;
+                                font-weight: 500;
                                 line-height: 20px;
                                 display: block;
                                 position: relative;
                                 color: $black;
                                 text-decoration: none;
-                                text-transform: uppercase;
                                 &:hover{
-                                    text-decoration: underline;
+                                    color: $primary;
                                 }
                             }
                         }
-                        @media only screen and (max-width:$desktop_breakout){
+                        @media only screen and (max-width:1440px){
                             gap:15px;
                             > li{
                                 a{
-                                    font-size: 14px;
+                                    font-size: 16px;
                                 }
                             }
                         }
@@ -175,7 +134,7 @@
                                     position: absolute;
                                     cursor: pointer;
                                     font-size: 20px;
-                                    right: -15px;
+                                    right: -22px;
                                     top: -20px;
                                     transition: 0.2s;
                                 }
@@ -209,7 +168,7 @@
                                     }
                                 }
                                 @media only screen and (min-width:1260px){
-                                    margin-top: 36px;
+                                    margin-top: 20px;
                                 }
                                 li{
                                     list-style: none;
@@ -224,7 +183,7 @@
                                         color: $black;
                                         text-align: left;
                                         text-transform: capitalize;
-                                        padding: 15px 25px;
+                                        padding: 10px 20px;
                                         &:hover{
                                             background-color: $primary;
                                             color: $white;
@@ -243,6 +202,7 @@
                                     visibility: visible;
                                     opacity: 1;
                                     display: block;
+                                    z-index: 9999;
                                 }
                                 .nav-icon-container{
                                     i{
@@ -253,20 +213,21 @@
                         }
                     }
                 }
-                @media only screen and (max-width: $tablet_breakpoint){
+                @media only screen and (max-width: $laptop_breakpoint){
                     display: block;
                     background-color: $white;
                     position: absolute;
-                    top:165px;
+                    top:139px;
                     bottom: 0;
-                    left: 0;
-                    right: 0;
+                    left: -40px;
+                    right: -40px;
                     padding: 0;
                     transform-origin: top center;
                     padding: 0;
                     display: none;
-                    background-color: $primary;
-                    height: 100vh;
+                    background-color: $black;
+                    height: calc(100vh - 165px);
+                    overflow-y: scroll;
                     &.show{
                         z-index: 999;
                         display: block;
@@ -328,6 +289,12 @@
                             }
                         }
                     }
+                }
+                @media only screen and (max-width: $mobile_breakpoint){
+                    top: 139px;
+                    height: calc(100vh - 140px);
+                    left: -20px;
+                    right: -20px;
                 }
             }
         }

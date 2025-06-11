@@ -2,7 +2,9 @@
 	$header_script = get_field('header_script', 'option');
 	$top_body_script = get_field('top_body_script', 'option');
 	$logo = get_field('logo','options');
-	$enable_topbar = get_field('enable_topbar','options');
+	$phone = get_field('phone','options');
+	$address = get_field('address','options');
+	$top_btn = get_field('top_custom_button','options');
 ?>
 
 <!doctype html>
@@ -28,31 +30,6 @@
 	<body <?php body_class(); ?>>
 	<?php if($top_body_script){echo $top_body_script;} ?>
         <header id="header" class="header">
-			<!-- Topbar -->
-			<?php if($enable_topbar){
-				$top_btn = get_field('top_custom_button','options'); ?>
-				<div id="topbar" class="topbar">
-					<div class="container-fluid">
-						<div class="grid col-2">
-							<?php if( have_rows('top_menu','options') ): ?>
-								<ul class="top-menu">
-									<?php while( have_rows('top_menu','options') ) : the_row();
-										$menu_item = get_sub_field('menu_item','options'); ?>
-										<li>
-											<a href="<?php echo $menu_item['url']; ?>" <?php if($menu_item['target']){echo 'target="_blank"';} ?>><?php echo $menu_item['title']; ?></a>
-										</li>
-									<?php endwhile; ?>
-								</ul>
-							<?php endif;
-							if($top_btn){ ?>
-								<div class="custom-button">
-									<a href="<?php echo $top_btn['url']; ?>" <?php if($top_btn['target']){echo 'target="_blank"';} ?>><?php echo $top_btn['title']; ?></a>
-								</div>
-							<?php } ?>	
-						</div>
-					</div>
-				</div>
-			<?php } ?>
 			<!-- Navigation Area -->
 			<div class="navigation">
 				<div class="container-fluid">
@@ -85,6 +62,12 @@
 								<rect class="line bottom" width="80" height="4" x="10" y="68" rx="5"></rect>
 							</svg>
 						</button>
+						<?php if($top_btn){
+							$btn = $top_btn; ?>
+							<div class="custom-button">
+								<?php include get_template_directory() . '/includes/buttons/btn-primary.php'; ?>
+							</div>
+						<?php } ?>	
 					</div>
 				</div>
 			</div>

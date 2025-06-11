@@ -1,6 +1,6 @@
 <?php
 
-//include_once get_stylesheet_directory() . '/custom-functions/register-cpt.php';
+include_once get_stylesheet_directory() . '/custom-functions/register-cpt.php';
 require_once get_stylesheet_directory() . '/includes/components.php';
 
 /*****************************************************
@@ -44,8 +44,11 @@ function html5blank_header_scripts()
 		wp_register_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), '3.5.1');
 		wp_enqueue_script('jquery');
 
-		wp_register_script('html5blankscripts2', get_template_directory_uri() . '/css/node_modules/bootstrap/dist/js/bootstrap.min.js', array(), '1.0.0');
-		wp_enqueue_script('html5blankscripts2');
+		// wp_register_script('html5blankscripts2', get_template_directory_uri() . '/css/node_modules/bootstrap/dist/js/bootstrap.min.js', array(), '1.0.0');
+		// wp_enqueue_script('html5blankscripts2');
+
+		// wp_register_script('html5blankscripts3', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '1.0.0');
+		// wp_enqueue_script('html5blankscripts3');
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0');
 		wp_enqueue_script('html5blankscripts');
@@ -71,7 +74,8 @@ function mind_defer_scripts( $tag, $handle, $src ) {
 	$defer = array(
 		'jquery',
 		'html5blankscripts',
-		'html5blankscripts2'
+		// 'html5blankscripts2',
+		// 'html5blankscripts3'
 	);
 	if ( in_array( $handle, $defer ) ) {
 		return '<script src="' . $src . '" defer="defer"></script>' . "\n";
@@ -140,8 +144,24 @@ add_shortcode('my_shortcode', 'my_shortcode');
 
 
 /*****************************************************
-            Custom WooCommerce Snippets
+    Disable Gutenberg 2 Options
 *****************************************************/
+function disable_gutenberg_editor() {
+  	remove_post_type_support('page', 'editor');
+}
+function hide_block_editor_layout() {
+  	global $post;
+	if($post){
+		if ( $post->post_type !== 'post' ) { // only hide for non-blog post types?>
+			<style>
+				.block-editor-block-list__layout {
+					display: none !important;
+				}
+			</style>
+			<?php
+		}
+	}
+}
 
 
 /*****************************************************
@@ -153,6 +173,8 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts');
 add_action('wp_enqueue_scripts', 'html5blank_styles'); 
 add_filter( 'script_loader_tag', 'mind_defer_scripts', 10, 3 );
 add_action('init', 'register_html5_menu');
+//add_action('init', 'disable_gutenberg_editor');
+add_action('admin_head', 'hide_block_editor_layout');
 // Add Filters
 add_filter('body_class', 'add_slug_to_body_class');
 // Remove Actions
@@ -168,16 +190,6 @@ remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
-// WooCommerce Support
-//add_theme_support( 'woocommerce' );
-
-//add_action( 'wp_enqueue_scripts', 'woocommerce_enqueue_styles' );
-
-function woocommerce_enqueue_styles() {
-    wp_enqueue_style( 'woocommerce-general', WC()->plugin_url() . '/assets/css/woocommerce.css' );
-    wp_enqueue_style( 'woocommerce-layout', WC()->plugin_url() . '/assets/css/woocommerce-layout.css' );
-    wp_enqueue_style( 'woocommerce-smallscreen', WC()->plugin_url() . '/assets/css/woocommerce-smallscreen.css' );
-}
 
 
 

@@ -1,38 +1,64 @@
-@import '../../../css/utilities/variables';
 .hero{
-    .section-inner{
-        position: relative;
-        .desktop-image{
-            @media only screen and (max-width:$mobile_breakpoint){
-                display: none;
-            }
+    position: relative;
+    &:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 20%;
+        left: 0;
+        right: 0;
+        background-color: $black;
+        z-index: -1;
+        @media only screen and (max-width: $laptop_breakpoint){
+            top: 5%;
         }
-        .mobile-image{
-            display: none;
-            @media only screen and (max-width:$mobile_breakpoint){
-                display: block;
+    }
+    .inner{
+        position: relative;
+        .hero-image{
+            position: relative;
+            z-index: 2;
+            max-width: 80%;
+            margin-left: auto;
+            margin-top: -15px;
+            @media only screen and (max-width: $laptop_breakpoint){
+                max-width: 100%;
+                margin-top: 0px;
+                z-index: 2;
+            }
+            img{
+                margin-left: auto;
+                box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
+            }
+            iframe{
+                width: 100%;
             }
         }
         .hero-caption{
             position: absolute;
-            top: 50%;
-            left: 60px;
-            right: 0;
+            content: '';
+            top: calc(50% - 10%);
             transform: translateY(-50%);
-            z-index: 99;
-            max-width: 500px;
-            @media only screen and (max-width:$mobile_breakpoint){
-                left: 20px;
-                right: 20px;
-                margin: 0 auto;    
+            left: 0;
+            background-color: $primary;
+            padding: 30px 40px;
+            max-width: 830px;
+            z-index: 3;
+            @media only screen and (max-width: $laptop_breakpoint){
+                position: relative;
+                top: 0;
+                transform: none;
+                z-index: 3;
+            }
+            @media only screen and (max-width: $mobile_breakpoint){
+                padding: 20px;
             }
             h1{
-                color: $white;
-                margin: 0;
-                font-size: 30px;
+                margin-bottom: 0px;
             }
-            p{
-                color: $white;
+            span{
+                display: block;
+                font-size: 24px;
             }
         }
     }

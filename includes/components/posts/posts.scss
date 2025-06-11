@@ -1,0 +1,78 @@
+.posts-section{
+    h2{
+        text-align: center;
+    }
+    .posts-block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        @media only screen and (max-width: $tablet_breakpoint){
+            grid-template-columns: 1fr;
+        }
+        .block{
+            background-color: $black;
+            padding: 20px;
+            img{
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+            }
+            .caption{
+                margin-top: 10px;
+                span{
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: normal;
+                    padding-bottom: 10px;
+                    color: $light;
+                }
+                strong{
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: $white;
+                    display: block;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 20px;
+                    margin-bottom: 0px;
+                    color: $white;
+                    display: contents;
+                }
+                a{
+                    display: inline-block;
+                    float: right;
+                    span{
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: $primary;
+                        padding-bottom: 0px;
+                        padding-right: 5px;
+                        display: inline-block
+                    }
+                    svg{
+                        display: inline-block;
+                    }
+                    &:hover{
+                        svg{
+                            animation: move 0.5s infinite;
+                        }
+                    }
+                    @keyframes move {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        50% {
+                            transform: translateX(5px);
+                        }
+                        100% {
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

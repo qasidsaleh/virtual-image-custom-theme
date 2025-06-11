@@ -1,9 +1,3 @@
-// Uncomment if you want to use booststrap but you need to double check it will change some style automatically with same classes
-// @use 'node_modules/bootstrap/scss/bootstrap' as *;
-
-//cd@use 'woocommerce/woocommerce.css';
-
-//@use 'utilities' as *;
 @use 'utilities/index';
 
 @use '../fonts/fonts';

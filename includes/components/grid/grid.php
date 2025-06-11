@@ -6,42 +6,48 @@
     if(!empty($generic_classes)){
         $generic_classes = implode(' ', $generic_classes);
     }
-
-    // get grid layout
-    $layout = get_sub_field('grid_layout');
-    
-    // Grid values array for 1/11, 2/10 column .....
-    $values = ['1-11', '2-10', '3-9', '4-8', '5-7', '7-5', '8-4', '9-3', '10-2', '11-1'];
+    $col1_option = get_sub_field('column_1');
+    $col2_option = get_sub_field('column_2');
 
 ?>
 
-<section class="grid-block <?php echo $generic_classes; ?>">
+<section class="grid-section <?php echo $generic_classes; ?>">
     <div class="container-fluid">
-        <div class="grid col-<?php echo $layout['value'];  ?>">
-            <?php 
-
-                $columns = array();
-                // For Simple Grid Columns e.g(2,3,4,5,6)
-                if (array_diff($values, $layout) === $values) {
-                    for ($i = 0; $i < $layout['value']; $i++) {
-                        $value = $i + 1;
-                        $group_value = 'column_'.$value;
-                        $group = get_sub_field($group_value);
-                        $group_content_value = 'column_'.$value.'_content';
-                        echo '<div>'.$group[$group_content_value].'</div>';
-                        
+        <div class="grid reveal-bottom">
+            <div class="grid-item">
+                <?php 
+                    $heading = $col1_option['grid_heading'];
+                    $content = $col1_option['grid_content'];
+                    $listing = $col1_option['grid_listing'];
+                    if($heading){ ?>
+                        <h2 class="large uppercase"><?php echo $heading; ?></h2>
+                    <?php }
+                    echo $content;
+                    echo '<div class="listing">';
+                    foreach($listing as $list){
+                        $heading = $list['heading'];
+                        $content = $list['content'];
+                        if($heading){
+                            echo '<strong>'.$heading.'</strong>';
+                        }
+                        echo $content;
                     }
-                } 
-                // For Complex Grid Columns e.g(1/11,2/10,3/9,4/8,5/7,7/5,8/4,9/3,10/2,11/1)
-                else { 
-                    for ($i = 1; $i < 3; $i++) { // In this case just 2 columns grid will be created with different width as per layout
-                        $group_value = 'column_'.$i;
-                        $group = get_sub_field($group_value);
-                        $group_content_value = 'column_'.$i.'_content';
-                        echo '<div>'.$group[$group_content_value].'</div>';
-                    }
-                }
-            ?>
+                    echo '</div>';
+                ?>
+            </div>
+            <div class="grid-item">
+                <div class="images">
+                    <?php 
+                        $images = $col2_option['grid_images'];
+                        foreach($images as $image){
+                            $image = $image['image'];
+                            if($image){
+                                display_image($image);
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </section>

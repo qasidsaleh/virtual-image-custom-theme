@@ -9,7 +9,7 @@
 			endif;
 		?>
 		<div class="container-fluid">
-			<div class="content-area mt-50">
+			<div class="content-area">
 				<?php
 					the_content();
 				?>

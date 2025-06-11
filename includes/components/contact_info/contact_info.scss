@@ -1,0 +1,119 @@
+.contact-info{
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media only screen and (max-width: $laptop_breakpoint){
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .column{
+            &:nth-child(2){
+                border-left: solid 3px $primary;
+                padding-left: 100px;
+                @media only screen and (max-width: $laptop_breakpoint){
+                    border-left: none;
+                    padding-left: 0px;
+                    border-top: solid 3px $primary;
+                    padding-top: 50px;
+                }
+            }
+            .block{
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                margin-bottom: 20px;
+                i{
+                    padding-top: 7px;
+                    color: $primary;
+                    font-size: 24px;
+                }
+                a,span{
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: $black;
+                    @media only screen and (max-width: $mobile_breakpoint){
+                        font-size: 20px;
+                    }
+                }
+                a{
+                    &:hover{
+                        color: $primary;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            p{
+                font-size: 24px;
+                font-weight: 400;
+                line-height: normal;
+                color: $black;
+                @media only screen and (max-width: $mobile_breakpoint){
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .form-area{
+        margin-top: 70px;
+        h2{
+            text-align: center;
+        }
+        .form-grid{
+            max-width: 1160px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            @media only screen and (max-width: $tablet_breakpoint){
+                grid-template-columns: 1fr;
+                gap: 0px;
+            }
+            .column{
+                p{
+                    margin-bottom: 0px;
+                }
+                label{
+                    position: absolute;
+                    content: '';
+                    opacity: 0;
+                    z-index: -999;
+                }
+                input{
+                    width: calc(100% - 30px);
+                    height: calc(95px - 30px);
+                    padding: 15px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: #A29E9E;
+                    background-color: $input_bg;
+                    border: none;
+                    outline: none;
+                    margin-bottom: 20px;
+                }
+                textarea{
+                    width: calc(100% - 30px);
+                    height: 295px;
+                    padding: 15px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: #A29E9E;
+                    background-color: $input_bg;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+        .form-btn{
+            text-align: center;
+            margin-top: 40px;
+            .btn{
+                min-width: 300px;
+            }
+            .wpcf7-spinner{
+                position: absolute;
+            }
+        }
+    }
+}

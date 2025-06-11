@@ -1,15 +1,23 @@
-$max_width: 1320px;
+$max_width: 1360px;
+$full_width: 1920px;
 
 // Responsive Breakpoint Variables
-$desktop_breakout: 1299px;
+$large_screen_breakpoint: 1920px;
+$desktop_breakpoint: 1299px;
 $laptop_breakpoint: 1199px;
+$tablet_landscape: 1025px;
 $tablet_breakpoint: 991px;
 $mobile_breakpoint: 767px;
+$small_breakpoint: 600px;
 
-$padding_desktop: 0 60px;
+$padding_desktop: 0 70px;
 $padding_mobile: 0 20px;
 
+// Fonts
+$font: "Outfit", sans-serif;
+
 // Colors Variables
+$primary: #ffa900;
+$white: #ffffff;
 $black: #000000;
-$white: #FFFFFF;
-$primary: #2c98d4;
+$bg: #f9f9f9;

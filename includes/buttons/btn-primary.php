@@ -1,6 +1,6 @@
 <!-- ***************************************************
 To add this to your own template, set the $title and $url, and add the following code:
-require ABSPATH . '/wp-content/themes/virtual-image/includes/buttons/btn-primary.php'; 
+include get_template_directory() . '/includes/buttons/btn-primary.php';
 *****************************************************-->
 
 <a href="<?php echo $btn['url']; ?>"

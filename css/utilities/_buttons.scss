@@ -1,23 +1,26 @@
 @import 'variables';
-
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit, 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button, 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button, 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button, 
-:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit, 
-:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button, 
-:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button, 
-:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
-.wp-element-button,
-.button{
-    padding: 10px 25px;
-    background-color: $primary;
-    border:solid 1px $primary;
-    color: $white;
+.btn{
+    font-family: $font;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all .3s;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 0px;
+    text-align: center;
+    &.btn-primary{
+        background-color: $primary;
+        color: $black;
+        outline: none;
+        border: solid 1px $primary;
+    }
+    &.small{
+        padding: 12px 24px;
+    }
     &:hover{
+        background-color: $black;
         color: $primary;
-        background-color: $white;
-        text-decoration: none;
+        border-color: $black;
     }
 }

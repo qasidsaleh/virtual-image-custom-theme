@@ -1,0 +1,148 @@
+@import 'utilities/variables';
+
+.footer{
+    background-image: url('../assets/images/footer-bg.webp');
+    width: 100%;
+    background-size: cover;
+    min-height: 760px;
+    background-repeat: no-repeat;
+    z-index: 4;
+    @media only screen and (max-width: $mobile_breakpoint){
+        padding-bottom: 60px;
+    }
+    .inner{
+        background-color: rgba(0,0,0,0.7);
+        margin-top: 100px;
+        .footer-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: $black;
+            @media only screen and (max-width: $tablet_breakpoint){
+                grid-template-columns: 1fr;
+            }
+            span{
+                text-align: left;
+                padding: 20px 25px;
+                font-size: 27px;
+                line-height: 35px;
+                color: $white;
+                @media only screen and (max-width: $mobile_breakpoint){
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+            a{
+                padding: 20px 25px;
+                font-size: 27px;
+                line-height: 35px;
+                text-align: center;
+                background-color: $primary;
+                color: $black; 
+                &:hover{
+                    opacity: 0.8;
+                }
+                @media only screen and (max-width: $tablet_breakpoint){
+                    text-align: left;
+                } 
+                @media only screen and (max-width: $mobile_breakpoint){
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .footer-info{
+            padding: 25px;
+            display: grid;
+            grid-template-columns: 260px 260px 1fr;
+            gap: 25px;
+            @media only screen and (max-width: $tablet_breakpoint){
+                grid-template-columns: 1fr;
+            }
+            .info-item{
+                .item{
+                    margin-bottom: 20px;
+                    @media only screen and (max-width: $tablet_breakpoint){
+                        &:last-child{
+                            margin-bottom: 0px;
+                        }
+                    }
+                    span,a{
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: $white;
+                        font-weight: 300;
+                    }
+                    a{
+                        &:hover{
+                            color: $primary;
+                        }
+                    }
+                    ul{
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        gap: 20px;
+                        li{
+                            position: relative;
+                            list-style: none;
+                            &:not(:last-child){
+                                &:before{
+                                    position: absolute;
+                                    content: '';
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: -10px;
+                                    width: 2px;
+                                    height: 15px;
+                                    background-color: $white;
+                                }
+                            }
+                            a{
+                                color: $white;
+                                font-size: 20px;
+                                color: $primary;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    &.copyrights{
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        span{
+                            color: $primary;
+                        }
+                    }
+                }
+                &:last-child{
+                    align-self: center;
+                    text-align: right;
+                    display: flex;
+                    gap: 20px;
+                    justify-content: end;
+                    a{
+                        font-size: 45px;
+                        color: $primary;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                @media only screen and (max-width: $tablet_breakpoint){
+                    &:nth-child(1){
+                        order: 3;
+                    }
+                    &:nth-child(2){
+                        order: 2;
+                    }
+                    &:nth-child(3){
+                        order: 1;
+                        justify-content: start;
+                    }
+                }
+            }
+        }
+    }
+}

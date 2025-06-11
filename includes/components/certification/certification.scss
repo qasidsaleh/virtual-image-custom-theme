@@ -1,0 +1,26 @@
+.certifications{
+    text-align: center;
+    .images{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width: $tablet_breakpoint){
+            grid-template-columns: 1fr;
+        }
+        .certificate{
+            text-align: center;
+            span{
+                font-size: 24px;
+                line-height: 28px;
+                color: $black;
+                display: block;
+                margin-bottom: 15px;
+            }
+            img{
+                margin: 0 auto;
+            }
+        }
+    }
+}

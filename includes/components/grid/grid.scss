@@ -1,73 +1,69 @@
-@import '../../../css/utilities/variables';
-
-.grid-block{
+.grid-section{
+    background-color: $black;
     .grid{
         display: grid;
+        grid-template-columns: 55% 1fr;
         gap: 50px;
-        &.col-1{
+        @media only screen and (max-width: $laptop_breakpoint){
             grid-template-columns: 1fr;
+            gap: 20px;
         }
-        &.col-2{
-            grid-template-columns: repeat(2 , 1fr);
-        }
-        &.col-3{
-            grid-template-columns: repeat(3 , 1fr);
-        }
-        &.col-4{
-            grid-template-columns: repeat(4 , 1fr);
-        }
-        &.col-5{
-            grid-template-columns: repeat(5 , 1fr);
-        }
-        &.col-6{
-            grid-template-columns: repeat(6 , 1fr);
-        }
-        &.col-1-11{
-            grid-template-columns: 1fr 11fr;
-        }
-        &.col-2-10{
-            grid-template-columns: 2fr 10fr;
-        }
-        &.col-3-9{
-            grid-template-columns: 3fr 9fr;
-        }
-        &.col-4-8{
-            grid-template-columns: 4fr 8fr;
-        }
-        &.col-5-7{
-            grid-template-columns: 5fr 7fr;
-        }
-        &.col-7-5{
-            grid-template-columns: 7fr 5fr;
-        }
-        &.col-8-4{
-            grid-template-columns: 8fr 4fr;
-        }
-        &.col-9-3{
-            grid-template-columns: 9fr 3fr;
-        }
-        &.col-10-2{
-            grid-template-columns: 10fr 2fr;
-        }
-        &.col-11-1{
-            grid-template-columns: 11fr 1fr;
-        }
-        @media only screen and (max-width: $laptop_breakpoint) {
-            &.col-6{
-                grid-template-columns: repeat(3 , 1fr);
-                gap: 40px;
+        .grid-item{
+            h2{
+                font-size: 45px;
+                color: $white;
+                @media only screen and (max-width: $mobile_breakpoint){
+                    font-size: 32px;
+                    line-height: 40px;
+                }
             }
-        }
-        @media only screen and (max-width: $tablet_breakpoint) {
-            &.col-5,&.col-6,&.col-1-11,&.col-2-10,&.col-3-9,&.col-4-8,&.col-5-7,&.col-7-5,&.col-8-4,&.col-9-3,&.col-10-2,&.col-11-1{
-                grid-template-columns: repeat(2 , 1fr);
-                gap: 30px;
+            p{
+                font-size: 18px;
+                color: $white;
+                margin-bottom: 35px;
             }
-        }
-        @media only screen and (max-width: $mobile_breakpoint) {
-            &.col-2,&.col-3,&.col-4,&.col-5,&.col-6,&.col-1-11,&.col-2-10,&.col-3-9,&.col-4-8,&.col-5-7,&.col-7-5,&.col-8-4,&.col-9-3,&.col-10-2,&.col-11-1{
-                grid-template-columns: 1fr;
-                gap: 0;
+            strong,b{
+                font-size: 20px;
+                color: $primary;
+                display: block;
+                margin-bottom: 5px;
+            }
+            ul{
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                li{
+                    font-size: 24px;
+                    color: $white;
+                    font-weight: 300;
+                    &::marker{
+                        color: $primary;
+                    }
+                    strong,b{
+                        display: inline-block;
+                    }
+                    a{
+                        &:hover{
+                            strong,b{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            .images{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 7px;
+                margin-bottom: -100px;
+                img{
+                    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
+                    width: calc(50% - 7px);
+                    &:nth-child(1){
+                        width: calc(100% - 7px);
+                    }
+                }
             }
         }
     }
